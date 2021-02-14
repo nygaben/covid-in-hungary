@@ -31,24 +31,26 @@ async function covid() {
   ) {
     document.getElementById(
       "vaccinated"
-    ).textContent = `People vaccinated (previous day): ${
-      hun[hun.length - 2].people_vaccinated
-    }`;
+    ).innerHTML = `People vaccinated (previous day): <br />
+ <span style="font-size: 24px; font-weight: 700;">${hun[hun.length - 2].people_vaccinated
+      }</span>`;
     document.getElementById(
       "total-vaccinated"
-    ).textContent = `Fully vaccinated (previous day): ${
-      hun[hun.length - 2].people_fully_vaccinated
-    }`;
+    ).innerHTML = `Fully vaccinated (previous day): <br />
+ <span style="font-size: 24px; font-weight: 700;">${hun[hun.length - 2].people_fully_vaccinated
+      }</span>`;
     document.getElementById("vaccination-difference").textContent = `+${raw}`;
     document.getElementById("vaccination-difference").style.color = "green";
   } else {
     document.getElementById(
       "vaccinated"
-    ).textContent = `People vaccinated: ${vaccinated1}`;
+    ).innerHTML = `People vaccinated: <br />
+ <span style="font-size: 24px; font-weight: 700;">${vaccinated1}</span>`;
     document.getElementById("vaccination-difference").textContent = `+${raw}`;
     document.getElementById(
       "total-vaccinated"
-    ).textContent = `Fully vaccinated: ${vaccinated2}`;
+    ).innerHTML = `Fully vaccinated:  <br />
+ <span style="font-size: 24px; font-weight: 700;">${vaccinated2}</span>`;
     document.getElementById("vaccination-difference").style.color = "green";
   }
 
@@ -153,30 +155,34 @@ async function covid() {
   if (typeof vaccinated2 === "undefined") {
     document.getElementById(
       "percent"
-    ).textContent = `${notupdatedFullyVaccinatedPercent}%  of the population is fully vaccinated`;
+    ).innerHTML = `<span style="font-size: 24px; font-weight: 700;">${notupdatedFullyVaccinatedPercent}%</span>  of the population is fully vaccinated`;
   } else {
     document.getElementById(
       "percent"
-    ).textContent = `${updatedFullyVaccinatedPercent} %  of the population is fully vaccinated`;
+    ).innerHTML = `<span style="font-size: 24px; font-weight: 700;">${updatedFullyVaccinatedPercent} %</span>  of the population is fully vaccinated`;
   }
 
   //adding the textcontent to the document
 
   document.getElementById(
     "update"
-  ).textContent = `The last update was on: ${lastUpdate}`;
-  document.getElementById("lastcase").textContent = `New cases: ${
-    cases[cases.length - 1]
-  }`;
+  ).innerHTML = `The last update was on:  <br />
+ <span style="font-size: 24px; font-weight: 700;">${lastUpdate}</span>`;
+  document.getElementById("lastcase").innerHTML = `New cases:  <br />
+ <span style="font-size: 24px; font-weight: 700;">${cases[cases.length - 1]
+    }</span>`;
   document.getElementById(
     "cases30Average"
-  ).textContent = `Average of the last 30 days: ${newCases30Average}`;
+  ).innerHTML = `Average of the last 30 days: <br />
+ <span style="font-size: 24px; font-weight: 700;">${newCases30Average}</span>`;
   document.getElementById(
     "deathaverage"
-  ).textContent = `Average of the last 30 days: ${newDeath30Average}`;
+  ).innerHTML = `Average of the last 30 days:  <br />
+ <span style="font-size: 24px; font-weight: 700;">${newDeath30Average}</span>`;
   document.getElementById(
     "newdeath"
-  ).textContent = `Number of new deaths: ${newDeaths}`;
+  ).innerHTML = `Number of new deaths:  <br />
+ <span style="font-size: 24px; font-weight: 700;">${newDeaths}</span>`;
 
   // const {new_cases} = hun[daysOfCovid-1]
   // console.log(new_cases)
