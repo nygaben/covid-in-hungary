@@ -25,14 +25,39 @@ body {
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: white;
     padding-top: 50px;
     padding-bottom: 80px;
 }
 
+.container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+}
+
+.container div h2 {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .container div {
+        width: 100%;
+    }
+
+    .container div div {
+        padding: 16px;
+    }
+}
+
 h2 {
     text-align: center;
+}
+
+#lastcase, #cases30Average, #newdeath, #deathaverage, #vaccinated, #totalvaccinated {
+    font-size: 16px;
 }
 
 .box {
@@ -53,6 +78,7 @@ h2 {
 
 .differences {
     padding-bottom: 50px;
+    font-size: 32px;
 }
 
 .update {

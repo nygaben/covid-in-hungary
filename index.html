@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <div class="header">
-        <h3>COVID IN HUNGARY</h3>
-      </div>
-    </header>
 
-    <p class="update" id="update"></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <title>Covid in Hungary</title>
+</head>
 
-    <main class="container">
-      <div>
-        <h2>Cases</h2>
-        <h2 id="cases-difference" class="differences"></h2>
-        <div class="box" id="lastcase"></div>
-        <div class="box" id="cases30Average"></div>
-      </div>
-      <div>
-        <h2>Deaths</h2>
-        <h2 id="death-difference" class="differences"></h2>
-        <div class="box" id="newdeath"></div>
-        <div class="box" id="deathaverage"></div>
-      </div>
-      <div>
-        <h2>Vaccination</h2>
-        <h2 id="vaccination-difference" class="differences"></h2>
-        <div class="box" id="vaccinated"></div>
-        <div class="box" id="total-vaccinated"></div>
-      </div>
-    </main>
-
-    <div class="percent">
-      <p id="percent"></p>
+<body>
+  <header>
+    <div class="header">
+      <h3>COVID IN HUNGARY</h3>
     </div>
+  </header>
 
-    <footer class="footer">
-      <h3>
-        <a href="https://github.com/owid/covid-19-data/tree/master/public/data"
-          >The source of data:
-          https://github.com/owid/covid-19-data/tree/master/public/data
-        </a>
-      </h3>
-    </footer>
+  <p class="update" id="update"></p>
 
-    <script src="code.js"></script>
-  </body>
+  <main class="container">
+    <div>
+      <h2>Cases</h2>
+      <h2 id="cases-difference" class="differences"></h2>
+      <div class="box" id="lastcase"></div>
+      <div class="box" id="cases30Average"></div>
+    </div>
+    <div>
+      <h2>Deaths</h2>
+      <h2 id="death-difference" class="differences"></h2>
+      <div class="box" id="newdeath"></div>
+      <div class="box" id="deathaverage"></div>
+    </div>
+    <div>
+      <h2>Vaccination</h2>
+      <h2 id="vaccination-difference" class="differences"></h2>
+      <div class="box" id="vaccinated"></div>
+      <div class="box" id="total-vaccinated"></div>
+    </div>
+  </main>
+
+  <div class="percent">
+    <p id="percent"></p>
+  </div>
+
+  <footer class="footer">
+    <h3>
+      <a href="https://github.com/owid/covid-19-data/tree/master/public/data">The source of data:
+        https://github.com/owid/covid-19-data/tree/master/public/data
+      </a>
+    </h3>
+  </footer>
+
+  <script src="code.js"></script>
+</body>
+
 </html>
