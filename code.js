@@ -31,12 +31,12 @@ async function covid() {
   ) {
     document.getElementById(
       "vaccinated"
-    ).innerHTML = `People vaccinated (previous day): The last update was on:  <br />
+    ).innerHTML = `People vaccinated (previous day): <br />
  <span style="font-size: 24px; font-weight: 700;">${hun[hun.length - 2].people_vaccinated
       }</span>`;
     document.getElementById(
       "total-vaccinated"
-    ).innerHTML = `Fully vaccinated (previous day): The last update was on:  <br />
+    ).innerHTML = `Fully vaccinated (previous day): <br />
  <span style="font-size: 24px; font-weight: 700;">${hun[hun.length - 2].people_fully_vaccinated
       }</span>`;
     document.getElementById("vaccination-difference").textContent = `+${raw}`;
@@ -44,12 +44,12 @@ async function covid() {
   } else {
     document.getElementById(
       "vaccinated"
-    ).innerHTML = `People vaccinated: The last update was on:  <br />
+    ).innerHTML = `People vaccinated: <br />
  <span style="font-size: 24px; font-weight: 700;">${vaccinated1}</span>`;
     document.getElementById("vaccination-difference").textContent = `+${raw}`;
     document.getElementById(
       "total-vaccinated"
-    ).innerHTML = `Fully vaccinated: The last update was on:  <br />
+    ).innerHTML = `Fully vaccinated:  <br />
  <span style="font-size: 24px; font-weight: 700;">${vaccinated2}</span>`;
     document.getElementById("vaccination-difference").style.color = "green";
   }
